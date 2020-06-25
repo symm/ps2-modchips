@@ -1,0 +1,43 @@
+If the matrix logo is showing at startup, then your "M, N, O, P, Q, T, U, V, R, W, CX, 3.3v and GND" Points are working perfectly. SX is for PS1 backup/import support, if it boots PS1 backups and/or imports then that point is working. "Y" is for Region Free DVD Playback, if it boots an out of region movie then your ok for that point. "A G H I B" are the PS2 backup/import support points so if its not booting up your PS2 backups and/or imports, i would check/rework those.
+
+https://assemblergames.com/threads/ps2-v15-gh-052-12-modbo-5-0-chipping-issue.61130/
+
+
+http://psx-scene.com/forums/f37/how-ps2-modchip-works-electronically-17783/
+
+1. the ps2 turns on and you select the mode by pushing a button that is tested whether or not signal is going thru during certain time periods to select mode
+
+2.the R wire waits for the bios to tell it that it is done writing it's info and the chip kicks in writing over some of the bios's writing
+using q,t,u,v,m,n,o,p
+
+3. the a wire tells when the dvd bus is buzy or not(correct if i'm wrong), then the B-I wires are sending the signal that a ps2 normally receives from an original disk, to fake the authentication of a disk
+.....sorry, also B-I reads certain data off the bus to determine cd or dvd
+
+4. the game should run, and certain patching goes on with the bios some more, and most chips patch again if needed..
+
+
+https://assemblergames.com/threads/flashing-the-ps2-bios.9492/
+
+There is nothing to flash on the PS2 besides 1024 bytes of EEPROM where it stores the Unit model, Serial number, DVD drive/user configurations and DVD player settings.
+
+The copy protection on the PS2 is based on two different stamps of data encoded on the disc initial sectors. 
+The first one identifies the disc as PS2 dsic and contains regional data.
+The second one is the "disc-id" and is checked just before the "Playstation 2" logo is printed. 
+Both checks are made by the DVD drive CPU "mechanics controller". The first check is performed automatically by the DVD drive upon a disc is detected. If this check fails, the disc is stopped and any attempt to perform data reads returns "drive not ready" error code.
+
+The second check is triggered by the bios through an special command.
+
+The modchip patches the "mechanics controller" bus to modify the data it reads from the DSP chip (208 pin LSI) and make it think the disc inserted is PS2 software that matches it's own region. the wire A is the chip select line that comes from the mechanics controller. B-I are the eight bit bus used for communications.
+
+The wires M-V W and R are used to patch the bios so the "disc-id" check (PS2LOGO module) is bypassed and the backup disc is booted. The patching is possible because during boot the IOP caches portions of the boot rom into it's own RAM for execution purposes.
+
+https://assemblergames.com/threads/ps2-v15-gh-052-12-modbo-5-0-chipping-issue.61130/
+
+No behavior typically means 1 (or a combination) of 3 things:
+
+1: Inadequate 3.3V
+2: Poor ground
+3: Poor oscillator connection (CX)
+
+
+https://github.com/mlafeldt/ps2logo/blob/master/Documentation/PS2_Disc_Security_explanations.htm
