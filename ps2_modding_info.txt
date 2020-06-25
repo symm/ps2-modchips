@@ -1,0 +1,402 @@
+Helpful info for PS2 modding By RETRO GAMING ARTS on youtube
+
+    Contents:
+	1.......BASIC INFORMATION
+	2.......Modbo5.0 Chip details + bad flash
+	3.......Finding install diagrams
+	4.......CHIP POINTS EXPLAINED FOR TROUBBLE SHOOTING
+	5.......WIRE
+	6.......SETTINGS
+	7.......PS2 SLIM V12 LASER FIX
+	8.......TROUBBLE SHOOTING AN INSTALL
+	9.......PS2 LASERS
+	10......PS2 Region code
+	11......VERSION # / SCPH # / GH #
+
+
+
+
+.:^*'"*^:BASIC_INFORMATION:^*"'*^:.
+.
+.
+.
+._______The PS2 Has 20 versions of it's motherboard, v12 was the start of the slim's, any V prior referes to the fat model. Inside each "V" ps2 motherboard revision, there can be multiple GH-xxx-xx versions for the same motherboard. When identifying the motherboard of your PS2, it's best to look at the SCPH-xxxx number as a guide to guage what V your mobo is, then pull it out and find your GH-xxx-xx number aswell.
+.
+._______There have been many many great chips for the PS2 through out it's life time, however in todays day and age, most of them are not many anymore. The modbo is the primary chips being made, and it's a cheap chinese clone. It gets the job done, but not as good as the originals. Due tue these being the main chips to use, this is what all of this will be focusing on
+.
+._______Modbo5.0 is for region free, backups, and HDD support.
+
+
+
+
+
+
+.:^*'"*^:CHIP_DETAILS + BAD_FLASH:^*"'*^:.
+.
+.
+.
+._______Modbo5.0 chips are clones of the original matrix infinity, they are CHEAP CHINESE CLONES. The modbo5.0 comes with firmware 1.93. some modbos5.0 have hacked 1.99 not 1.93, the firmware cannot be updated or changed like you can do on the original matrix infinity, attempting to do so will brick your chip and could potentially the bios aswell.
+.
+._______Sometimes they have a bad flash on the chip. If you install one of these and get a BLACK SCREEN, or if it FREEZES on the MATRIX logo for 20+ seconds. that = bad flash of the chip. Replace the chip, boom fixed.
+.
+._______Another symptom of a bad flash on the modbo chip is 4x RED ! ! ! ! on screen, swap chip to fix this also. 
+.
+.********NOTE********
+Matrix logo freezeing for 20+ seconds 100% means bad flash on the modchip.
+BLACK SCREEN, can be multiple other issues, but if it was a working ps2, and your solder work is PERFECT. then this is most likely also a bad flash of the chip.
+FOR BLACK SCREEN, doubble check your fuses, and the soldering on your entire mod, specifically the bios chip aswell.
+.
+._______The firmware is essentually a hacked bios, so your soldering the chip to the bios of the PS2, If the modbo cannot inject its code properly to the bios because of solder bridges and other install mistakes, this will cause a black screen.
+.
+.
+.
+._______there's also a pad timeout, this is how long it will wait on a black screen before booting if a controller isn't but 
+
+
+.((((((((The bios points on the modbo are M,N,O,P,Q,T,U,V,R, but I'll go more into that later down, keep reading lol))))))))
+
+
+	
+
+.:^*'"*^:FINDING INSTALL DIAGRAMS:^*"'*^:.
+.
+.
+.
+________there are no install diagrams for modbo5.0, use the 4.0 diagrams
+.
+._______I find it BEST to search specifically based off of the GH-xx-xx number on your PS2's motherboard. Using the SCPH-xxxx number is helpful to identify what motherboard MAY be inside, but for each SCPH-xxxx number, there could potentially be up to 3 different GH-xx numbers. Doubble check your diagram before you install, make sure the diagram matches to your motherboard (make sure your mobo has all the correct points the diagram points to)
+.
+._______Side note for V4 PS2's, the V4 PS2's have something called "BIOS GAP" you may have what's reared to as GAP or NO GAP. this is the bios chip literally has a gap between points on it, you will see a gap in the legs of the chip, or no gap. Make sure your using the correct install diagram for these PS2's.
+.
+*****BOTTOM OF THIS DOCUMENT HAS ALL THE SCPH/GH NUMBERS LISTED******
+.
+***When installing modbos on Ps2 fats, H isn't needed on PAL ps2's. only NTSC and JPN.*** 
+
+
+
+
+
+.:^*'"*^:WIRE:^*"'*^:.
+.
+.
+.______30 AWG KYNAR OR BUST. This is the wire you want to use, hands down, nothing else. EXCEPT you must use thicker 24-26 guage wire for POWER AND GROUND only.
+Thinner wire for power/ground on the PS2 modchips can cause issues.
+
+
+
+
+
+.:^*'"*^:CHIP POINTS EXPLAINED:^*"'*^:.
+.
+.
+.
+--M, N, O, P, Q, R, T, U, V--
+these are your bios points, they connect to the bios chip on the PS2, for slim's
+almost all of the diagrams use the solder pads on the opposite side of where the
+bios chip is located, to make the install easier.
+The firmware on the modchip is a hacked bios, so soldering to these is very important
+.
+.
+--W--
+W is the timing point to load the game from POST (Power On Self Test(or when the ps2 logo appears)) Withought a propor W point, games wont load. Very important
+.
+.
+--B, G, H, I--
+thgese are the CD/DVD ccontroller points 
+These points tell the CD/DVD controller chip what type of media is in the disc tray.
+.
+.
+--sx--
+SX is in controll of your PS1 everything.
+.
+.
+--A--
+A is the POST monitoring point, this point controlls everything for the modchip, without
+this point, the PS2 wont boot anything
+.
+.
+--Y--
+Y is the macrovision point (to load the game in full display)
+You can turn macrovision fix on and off from the settings menu, but leave it ON
+
+dvd filmes have macrovision protection to stop you from being able to hook it up to an external device, like a VCR or PC etc, doing so makes the image unstable, turning this setting on removes macrovision protection.
+.
+.
+--RESET--
+the RESET point times the boot of the bios on the ps2 with the modbo's firmware, so they boot the chip into the bios at the correct time, so this is an important point.
+Some revisions of the PS2 have multiple reset points, some are reset + and some are resent - this mattered for OLDER OLDER chips, but for most modchips, you can use either reset point and the effects will be the same
+.
+.
+--CX--
+the CX point is the clock timer, the ORIGINAL MATRIX INFINITYS had a clock timer intergrated into the FPGA's code, so the clock point was NOT NEEDED on the originals, however, the MODBOS are a chinese clone of the original matrix infinitys, and they do not use the same IC on them, they are not capable of having a clock timer inside (the crystal chips used a crystal oscillator on them for this) SO the MODBOS use the CX point, witch pulls the clock signal from the PS2 itself, If this point has interference it can throw the whole mod off. Ever seen people run wires under the legs of the CD/DVD controller chip? (i'm guilty, i've done it several times...) you should be weary of do this. 99% of the time it doesnt matter. but if there is interference on the CX point, it can throw the whole mod off. Doubble check this point if your having issues.
+.
+.
+--POWER/GROUND--
+self explanitory but i must mention
+These points should be 24 guage wire, or 26. Thick wire. These chips do not perform well when the voltage and ground wires are thin. this can cause several different issues.
+
+
+
+
+.:^*'"*^:SETTINGS:^*"'*^:.
+.
+.
+.______You can hold TRIANGLE + CIRCLE on boot and access the menu, you can select the BOOT MODE, possible boot options are
+.
+AUTO - boots whatever disc type is in tray
+DEV1 - Boots from memory card
+DEV2 - boots from HDD
+MASS - boots from USB
+.
+Other settings that you should have set are
+PS2 Screen fix needs to be on color, that's the default it was set to be on
+Mc16 and ATAD needs to be off
+Green fix on
+Pad detect on the lowest helps too
+dvd region 8 for region free dvd
+
+
+
+.:^*'"*^:PS2 SLIM V12 LASER FIX:^*"'*^:.
+.
+.
+.
+.______V12 PS2 SLIM. This is the first revision of the PS2 SLIM. They need a laser fix, what this does is sometimes the modchipped V12's can send too much voltage to the laser and KILL IT. Using the MATRIX PIC FIX you can prevent this from happening, It will shut off the PS2 if it detected the spike in voltage. Saving the laser. 
+.
+.______You can also use a diode fix, or a neo13 or other various premade fixes witch is a diode fix + pic chip fix.
+(diode fix by itself is garbage)
+
+::neo fix:: 
+is the signal zener diodes and pic fix.
+.
+::sum0ne fix:: 
+is using different ohm resistor on the focus and trackin coils
+.
+::subzero fix::
+the v12 has three models, so each resistor model you use a special resistor for the tracking coil, the focus is just one standard resistor. subzero fix
+.
+::PIC FIX:: this is the one where you take the same IC you use to create mm3 modchips for ps1, flash it with the pic fix, and solder it in with the 1500ohm resistor.
+.
+**ROMEO FIX FOR V9!:: THIS ONE IS FOR V9. V9 PS2 require romeo fix
+
+Romeo fix: for V9/V10 you connect PIN17 of LA6508 chip to 5V
+
+
+
+
+
+
+
+.:^*'"*^:TROUBBLE SHOOTING AN INSTALL:^*"'*^:.
+	
+
+
+	First thing to note is the difference between the 2 install points on the board. The points that go to the BIOS are W, R, M, N, O, P, Q, T, U, V.. with W being the most important. Now if the doesnt properly work, it could be because of these bios points, and heres some Way's to tell if its not working.
+
+	One of the first things to do before troubble shooting to much is 
+While booting the PS2, hold TRIANGLE + CIRCLE. This will give you access to the modbo's  menu. If you have access to that, your modbo is properly injecting its code into the bios. IF you get this screen, SKIP down to the CD/DVD controller part of this comment
+
+........IF your MODBO install Does any of the following.......
+
+1, boots a black screen
+2, booting and freezing on matrix logo
+3, booting and displaying 4 red ! ! ! ! 
+4, ps2 boots perfectly and runs normally, but is UNMODDED it seems.
+(all 4 of these could also be the modbo chip having whats called 'a bad flash' meaning since they where made in china in large quantitys, they could have been programmed incorrectly and still sold).
+.
+	So if any of these are the issue, FIRST, examine your solder joints perfectly, make sure NOTHING is bridged and everything is the right point from the diagram. Also doubble check the Diagram with your GH-00x number. Make sure you have the CORRECT GH-00x number to your diagram, for instance, certain SCPH-xxxx number PS2's can be a certain V# , SCPH-70012 is a V12 for example. and that V12 can have multiple different GH-0xx-00 numbers. So cross reference the install diagram multiple times.
+.
+	IF YOU ARE 100% CERTAIN you used the correct diagram, and your solder joints are perfect remove the chip and replace with new chip
+. before replacing with new chip, test your PS2 as its stock, just to make sure nothing is wrong. If the PS2 is reverted back to stock and you still have issues. look for a component that may have fallen off the  PS2 during the install.
+.
+*****FOR PAL PS2's THE "H" POINT ON THE INSTALLS IS NOT NEEDED, ONLY USE THIS POINT FOR NTSC/JAP PS2S*****
+.
+.
+	OK, SO, LETS SAY NONE OF THAT IS YOUR PROBLEM, Lets say your PS2 boots to the Matrix infinity menu, but you can get any media to play.
+That will be your CD/DVD controller points,  the CD/DVD ccontroller points B, G, H, I. and the CD/DVD controller is that BIG chip with the super fine pitch legs.
+.
+	Keep in mind that PS1 games the first point to check is SX, but if you find out that only some PS1 formats work, go check B G H I
+.	
+	First thing you must do, to diagnose this problem, is play every type of media you can. Start with media from the region of the PS2.
+Lets pretend we're talking about a JAPAN ps2.
+.
+1. try Japan PS2 game
+2. try NTSC/PAL game
+.
+.	Now that you have confirmed the region works or does not work, we can move on. If the system is a JAPAN system, but will not play japanese games. Either the laser just died or every solder point needs to be doubble checked, and possibly removal of the chip, reverted back to normal, tested, and installed with a new chip.
+.
+.	If Same region media works/other region media works. (also test ps1 region and other region)
+.
+	 Now its time to test Burned media, Start with PS2, then do PS1.
+.
+.	If your getting mixed results of some media working and others not working, Redo the A, B, G, H, I points, double check your solder work, and your diagram.
+These points are the points that control the different media that is played. So that's exactly where to check. 
+
+
+
+
+
+
+.:^*'"*^:RANDOM FACT:^*"'*^:.
+.
+.________PS2 modchips used to be 5volt. but that used to kill the power, because those 5 volt chips used to absorb most of the power and it caused the video to hum. This is why you see all the PS2 modchips as 3.3v
+
+
+
+
+
+
+.:^*'"*^:PS2 LASERS:^*"'*^:.
+.
+.
+PS2 FAT  - KHS-400a KHS-400b KHS-400c 
+PS2 SLIM - 7000x - SPU3170
+PS2 SLIM - 7500x and up - PVR-802W 
+
+slim lasers, for 7000x KHM-430 SONY
+PVR-802 MITSUMI 3170 philips(discontinued after v15)
+
+
+
+
+.:^*'"*^:PS2 REGION CODE:^*"'*^:.
+.
+.
+.
+.
+for FAT ps2's the number in the SCPH is the region code, 
+
+SCPH 30000 = Japan
+SCPH 30001 = USA
+SCPH 30003 = UK
+SCPH 30004 = EUR
+SCPH 30005 = KOR
+SCPH 30006 = Hong Kong/Singapore
+SCPH 30007 = Taiwan
+SCPH 30008 = Russia
+SCPH 30012 = MEXICO
+
+For slims it's a little changed around
+
+SCPH-70000 = Japan
+SCPH-70012 = USA
+SCPH-70011 = Canada
+SCPH-70002 = AUS
+SCPH-70003 = UK
+SCPH-70004 = EUR
+
+
+
+
+.:^*'"*^:(  VERSION#   SCPH#   GH#  ):^*"'*^:.
+.
+.
+.
+.
+.
+--V0--
+SCPH 1000-1500-1800, only released in japan
+
+--v1--
+SCPH 30001 GH-004
+
+--v2--
+SCPH 30001 GH-005
+
+--v3--
+SCPH 30001 GH-006 (GAP OR NO GAP CAN BE FOUND ON THIS MOBO)
+
+--v4--
+SCPH 30001 GH-010 (GAP OR NO GAP CAN BE FOUND ON THIS MOBO)
+SCPH 35001 GH-010 (GAP OR NO GAP CAN BE FOUND ON THIS MOBO)
+
+--v5--
+SCPH 30001R GH-015 (EARLY VERSIONS HAD v4 BOARD INSIDE)
+
+--v6--
+SCPH 30001R GH-015
+
+--v7--
+SCPH 39001 GH-019
+
+--v8--
+SCPH 39001 GH-019
+SCPH 39001 GH-022
+
+--v9--
+SCPH 50001 GH-023
+
+--v10--
+SCPH 50001 GH-026
+*for EUR/AUS v10's, there will be an (A) in the serial, A will be GH-026, no A = GH-023
+
+(V9 + V10 ps2's have DVD Drive version 3.00 for v9 and 3.02 for v10)
+
+--V11--
+Only released in Europe. 
+(it's a V10 with a newer laser)
+SCPH-50004 GH-027  
+SCPH-50004 GH-029
+
+
+
+
+*NOW SLIMS*
+
+
+--v12--
+SCPH-70012 GH-032-12
+SCPH-70012 GH-035-11
+SCPH-70012 GH-035-12
+SCPH-70012 GH-035-21
+SCPH-70012 GH-035-31
+
+--V13--
+Same SCPH/GH numbers as V12, just missing the phone jack on the back
+
+--V14-- 
+SCPH-75001 GH-036-51 
+SCPH-75001 GH-037-01 
+SCPH-75001 GH-037-11     
+SCPH-75001 GH-037-12
+SCPH-75001 GH-037-22
+SCPH-75001 GH-037-31
+SCPH-75001 GH-040-11
+SCPH-75001 GH-040-12
+SCPH-75001 GH-040-51
+SCPH-75001 GH-041-14
+SCPH-75001 GH-041-33
+
+--v15--
+SCPH-77001a GH-051-02
+SCPH-77001a GH-051-12
+SCPH-77001a GH-051-32
+SCPH-77002a GH-051-02
+SCPH-7700x  GH-051-51
+SCPH-77004  GH-052-02
+
+--V16--
+SCPH-77001b GH-051-52
+SCPH-77004  GH-052-02
+
+--V17--
+SCPH-79001 GH-061-51
+
+--V18--
+SCPH-90001 GH-070-42
+SCPH-90001 GH-071-42
+SCPH-90001 GH-072-42
+
+
+
+
+
+     .:^*'"*^:SPECIAL THANKS:^*"'*^:.
+
+If you see your name i'm sure you know why.
+
+________________THANK_YOU__________________
+
+        [Modzie] 	 [spedmetal] 
+[david] 	  [Jei]		     [will] 
+	 [jinn] 	   [crans]
