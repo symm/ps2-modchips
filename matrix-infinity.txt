@@ -1,0 +1,85 @@
+## Shortcut buttons
+
+Even though this chip has the automatic media detection feature, there will sometimes be a game or movie that will not boot undernormal circumstances. This list is to allow you to force it to boot.
+
+On turning on the PS2 the Infinity will start to look for the game Controller in slot 1.If no Controller is present the Infinity will keep on looking for it for about 10/15 seconds.The screen will remain BLACK in these 15 seconds.After the time elapses Infinity will boot the PS2 normally.
+
+Circle - Boots Chip/system into PSX DVD Video mode. This forces the PS2 to either play PS1 games or DVD movies.
+
+Triangle - Forces the system to boot the Infinity Manager (if installed - To install, please refer to the Infinity Manager section inthis tutorial)
+
+Cross - Forces the system to bypass settings and boot to the Sony Browser with the chip enabled.
+
+Start - This Disables the chip. Once this is done, tap the standby button to reset the system to finish disabling the chip. ToRe-enable the chip you must place the system into standby.
+
+Select - This forces a Fast boot on PS2 games. Basicly skipping the startup animation and PLaystaion 2 Logo on disc boot.
+
+R1 - This boots a homebrew ELF file from the first memory card (mc0:/BOOT/BOOT.ELF) If installed - To install, please refer tothe DEV1 section of this tutorial.
+
+L1 - This boots a homebrew ELF file from the hard drive if installed (hdd0:/__boot/boot.elf) To install, please refer to the DEV2section of this tutorial.To enter the Configuration Menu, hold TRIANGLE AND CIRCLE at power on
+
+## Configuring the Matrix Infinity Menu.
+
+### PS2 Screen fix
+Options:
+a. Off - Uses system default.
+b. NTSC - Used to force NTSC signal format on all games/software
+c. PAL60 - Used to force NTSC signal format with color correction on PAL televisions that can handle NTSC signals.
+d. VGA - Use if you have a Blaze VGA adapter or on official one that came with the Linux Kit.
+e. Color - Uses your PS2's default region signal with color correction.
+f. PAL - Forces stanard PAL TV signal on all games/software
+
+### Y Screen Fix
+Options:
+a. Off - uses software defaut for region.
+b. Auto - Automaticly adjust the Y axis on Imported games.
+c. -20 through +20 - Manually adjusts Y axis on Imported games.
+
+### PSX Multi Disk
+Options:
+a. Off - Doesn't allow for multi disk PS1 games.
+b. On - Automaticly wakes the chip up from auto-sleep to allow backup PS1 disk changing.
+
+### MC16 Patch 
+Options:
+a. Off - Does not automatically allow use of memory cards over 8MB without their boot disc.
+b. On - Allows use of memory cards over 8MB without boot disc.
+
+### ATAD Auto Patch
+Options:
+a. Off - Inability to use Non-official hdd with software that uses the official hard drive
+b. On - Allows use of non-official hdd with software that would normally wouldn't allow it.
+
+### Macrovision Fix
+Allows fix for DVD movie protection fix on PS2.
+
+### Green Fix
+
+Allows fix for DVD Video Color.
+
+### DVD Video Region
+
+Selectable list of Video regions for DVD video discs.
+
+### DVD 9 DL Support
+Options:
+a. Off - Doesn't allow support of Dual Layered PS2 game backups.
+b. On - Allows use of Dual Layered PS2 game backups.
+
+### Boot Mode
+Options:
+a. Auto - Boots to $ony Browser with ability to boot PS2 and PS1 originals and backups. But not limited to this. Use ShortcutButtons at Matrix logo at startup to force alternate boot such as DEV1 or DEV2
+b. Fast - Quickly boots PS2 media without logos being displayed.
+c. INFMAN - Automatically boots Infinity Manager if installed.
+d. DEV1 - Automatically boots "BOOT.ELF" from MC0:/BOOT/ If installed.
+e. DEV2 - Automatically boots "boot.elf" from hdd0:/__boot/ If installed.
+f. DVDV - Automatically forces boot of DVD video disc or PS1 game.
+
+### Pad Detect Time
+
+Selectable timer that pauses system at startup before booting without a controller hooked up.
+
+### Boot Logo
+Options:
+a. Off - Doesn't display Matrix Logo at startup
+b. On - Will display Matrix Logo at startup.
